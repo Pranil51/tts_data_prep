@@ -5,7 +5,7 @@ import shutil
 def to_seconds(timestamp):
     min, sec = list(map(int,timestamp.split(':')))
     return min*60 + sec
-
+file = open("hf_token.txt","r")
 from extract_from_multispeaker import *
 from denoise_and_chunk import *
 import pandas as pd
@@ -26,7 +26,7 @@ if __name__=="__main__":
             output_dir=os.path.join('Utterances',language)
             audio_paths = [Audio_from_YT(link, speaker + f"{i}", output_dir) for i, link in enumerate(links)]
             extract_utterance(audio_paths,starts,ends,
-                                "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",
+                                file.read(),
                                 output_dir, speaker)
         except RuntimeError as e:
             print(e, "failed to process speaker data. Continuing for the next speaker.")
