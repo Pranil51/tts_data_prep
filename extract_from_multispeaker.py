@@ -45,8 +45,6 @@ def Diarize(audio_path, speaker_name, auth_token, output_dir):
     return dia_output_file
 def extract_utterance(audio_paths, ref_starts, ref_ends, auth_token, output_dir, speaker_name):
     ## pyannote diarization
-    os.mkdir('Utterances')
-    output_dir=os.path.join('Utterances',output_dir)
     if not os.path.exists(output_dir):
         os.mkdir(output_dir)
     def Identify_Speaker(speakers_sample, ref_utterance, source_sr):
@@ -153,7 +151,7 @@ def extract_utterance(audio_paths, ref_starts, ref_ends, auth_token, output_dir,
     ## export speaker segments
     pwd = os.getcwd()
 
-    speaker_dir = os.path.join('Utterances', output_dir, speaker_name)
+    speaker_dir = os.path.join(pwd, output_dir, speaker_name)
     if not os.path.exists(speaker_dir):
         os.mkdir(speaker_dir)
     for f_segment, f_wav in all_segments.items():

@@ -11,7 +11,7 @@ def transcribe_audio_with_azure(audio_path):
         duration = sound.duration_seconds
 
         # Replace with your subscription key and region
-        subscription_key = '372e4baf1340448b889e28f88d9be53c'
+        subscription_key = ''
         region = 'centralindia'
 
         speech_config = speechsdk.SpeechConfig(subscription=subscription_key, region=region)
