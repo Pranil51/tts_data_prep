@@ -7,11 +7,11 @@ create a 99% clean data corpus of single-speaker utterances from open-source dat
 4. A segment should be at least 10-20 seconds.
 ## Input-
 It is a speaker data file consisting of,
-1. Speaker: the speaker's name. It is a unique attribute.
-2. link: Link1, Link2, .. Link5. YouTube video links of the speaker.
-3. segment_start: segment_start1, segment_start2, ... segment_start5. starta of the segment for Link1, Link2, .. Link5 consequtively.
-4. segment_end: segment_end1, segment_end2, ... segment_end5. enda of the segment for Link1, Link2, .. Link5 consequtively.
-5. language: language of the speaker
+1. **Speaker**: the speaker's name. It is a unique attribute.
+2. **link**: Link1, Link2, .. Link5. YouTube video links of the speaker.
+3. **segment_start**: segment_start1, segment_start2, ... segment_start5. starta of the segment for Link1, Link2, .. Link5 consequtively.
+4. **segment_end**: segment_end1, segment_end2, ... segment_end5. enda of the segment for Link1, Link2, .. Link5 consequtively.
+5. **language**: language of the speaker
 6. A maximum of 5 video links can be added.
 ## Output-
 ```mermaid
